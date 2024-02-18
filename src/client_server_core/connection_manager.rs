@@ -270,10 +270,10 @@ fn is_alive(ip: &str, port: &str) -> bool {
 
     let res = TcpStream::connect(&server_addr);
     match res {
-        Ok(socket) => {
+        Ok(_) => {
             return true;
         }
-        Err(E) => {
+        Err(_) => {
             return false;
         }
     }
